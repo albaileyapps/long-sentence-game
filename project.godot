@@ -8,10 +8,57 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Resource",
+"class": "Session",
+"language": "GDScript",
+"path": "res://resources/session.gd"
+}, {
+"base": "Resource",
+"class": "Task",
+"language": "GDScript",
+"path": "res://resources/task.gd"
+}, {
+"base": "Resource",
+"class": "Tasks",
+"language": "GDScript",
+"path": "res://resources/tasks.gd"
+}, {
+"base": "Resource",
+"class": "Team",
+"language": "GDScript",
+"path": "res://resources/team.gd"
+}, {
+"base": "Resource",
+"class": "Teams",
+"language": "GDScript",
+"path": "res://resources/teams.gd"
+}, {
+"base": "Resource",
+"class": "TimerSettings",
+"language": "GDScript",
+"path": "res://resources/timer_settings.gd"
+} ]
+_global_script_class_icons={
+"Session": "",
+"Task": "",
+"Tasks": "",
+"Team": "",
+"Teams": "",
+"TimerSettings": ""
+}
+
 [application]
 
 config/name="long-sentence-game"
+run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Consts="*res://globals/Consts.gd"
+SoundManager="*res://globals/SoundManager.gd"
+Utils="*res://globals/Utils.gd"
 
 [gui]
 

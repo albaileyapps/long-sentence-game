@@ -1,0 +1,84 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/SceneBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/EditTask.gd" type="Script" id=2]
+[ext_resource path="res://themes/small_font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://themes/large_font.tres" type="DynamicFont" id=4]
+[ext_resource path="res://assets/img/icon-done.png" type="Texture" id=5]
+[ext_resource path="res://assets/img/icon-delete-pressed.png" type="Texture" id=6]
+
+[node name="EditTask" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/Control" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 40.0
+margin_top = 10.0
+margin_right = -40.0
+margin_bottom = -10.0
+custom_constants/separation = 20
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/VBoxContainer2" index="0"]
+margin_right = 944.0
+margin_bottom = 45.0
+custom_fonts/font = ExtResource( 4 )
+text = "Edit Task"
+align = 1
+valign = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/VBoxContainer2" index="1"]
+margin_top = 65.0
+margin_right = 944.0
+margin_bottom = 537.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 20
+
+[node name="TaskTitleEdit" type="LineEdit" parent="CanvasLayer/Control/VBoxContainer2/VBoxContainer" index="0"]
+unique_name_in_owner = true
+margin_right = 944.0
+margin_bottom = 34.0
+align = 1
+placeholder_text = "Title"
+
+[node name="DescriptionEdit" type="TextEdit" parent="CanvasLayer/Control/VBoxContainer2/VBoxContainer" index="1"]
+unique_name_in_owner = true
+margin_top = 54.0
+margin_right = 944.0
+margin_bottom = 472.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Description"
+breakpoint_gutter = true
+fold_gutter = true
+wrap_enabled = true
+caret_blink = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer2" index="2"]
+margin_top = 557.0
+margin_right = 944.0
+margin_bottom = 580.0
+custom_constants/separation = 15
+alignment = 1
+
+[node name="ExitButton" type="Button" parent="CanvasLayer/Control/VBoxContainer2/HBoxContainer" index="0"]
+margin_left = 399.0
+margin_right = 460.0
+margin_bottom = 23.0
+text = "Done"
+icon = ExtResource( 5 )
+
+[node name="DeleteButton" type="Button" parent="CanvasLayer/Control/VBoxContainer2/HBoxContainer" index="1"]
+margin_left = 475.0
+margin_right = 544.0
+margin_bottom = 23.0
+text = "Delete"
+icon = ExtResource( 6 )
+
+[connection signal="text_changed" from="CanvasLayer/Control/VBoxContainer2/VBoxContainer/TaskTitleEdit" to="." method="_on_TitleEdit_text_changed"]
+[connection signal="text_changed" from="CanvasLayer/Control/VBoxContainer2/VBoxContainer/DescriptionEdit" to="." method="_on_DescriptionEdit_text_changed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer2/HBoxContainer/ExitButton" to="." method="_on_ExitButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer2/HBoxContainer/DeleteButton" to="." method="_on_DeleteButton_pressed"]

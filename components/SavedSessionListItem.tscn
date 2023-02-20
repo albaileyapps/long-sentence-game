@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/img/btn-delete-pressed.png" type="Texture" id=1]
+[ext_resource path="res://assets/img/btn-delete.png" type="Texture" id=2]
+[ext_resource path="res://components/SavedSessionListItem.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 0.235294 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 0.388235 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 0.313726 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="SavedSessionItem" type="HBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -550.0
+script = ExtResource( 3 )
+
+[node name="StartSessionButton" type="Button" parent="."]
+margin_right = 1000.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 1 )
+text = "Title"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 1004.0
+margin_right = 1024.0
+margin_bottom = 50.0
+alignment = 1
+
+[node name="DeleteButton" type="TextureButton" parent="VBoxContainer"]
+margin_top = 15.0
+margin_right = 20.0
+margin_bottom = 35.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 1 )
+
+[connection signal="pressed" from="StartSessionButton" to="." method="_on_StartSessionButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/DeleteButton" to="." method="_on_DeleteButton_pressed"]

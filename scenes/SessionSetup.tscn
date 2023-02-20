@@ -1,0 +1,80 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/SceneBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/SessionSetup.gd" type="Script" id=2]
+[ext_resource path="res://themes/large_font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://assets/img/icon-cancel.png" type="Texture" id=4]
+[ext_resource path="res://assets/img/icon-start.png" type="Texture" id=5]
+[ext_resource path="res://themes/x_small_font.tres" type="DynamicFont" id=6]
+
+[node name="SessionSetup" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 40.0
+margin_top = 10.0
+margin_right = -40.0
+margin_bottom = -10.0
+custom_constants/separation = 20
+alignment = 1
+
+[node name="SceneTitleLabel" type="Label" parent="CanvasLayer/Control/VBoxContainer" index="0"]
+margin_right = 944.0
+margin_bottom = 45.0
+custom_fonts/font = ExtResource( 3 )
+text = "New Session"
+align = 1
+valign = 1
+
+[node name="ExplanationLabel" type="Label" parent="CanvasLayer/Control/VBoxContainer" index="1"]
+margin_top = 65.0
+margin_right = 944.0
+margin_bottom = 114.0
+custom_fonts/font = ExtResource( 6 )
+text = "Give your new session a title. For exampl,  the class name. Sessions are automatically saved so you can play  across more than one lesson."
+autowrap = true
+
+[node name="Spacer" type="Control" parent="CanvasLayer/Control/VBoxContainer" index="2"]
+margin_top = 134.0
+margin_right = 944.0
+margin_bottom = 184.0
+rect_min_size = Vector2( 0, 50 )
+
+[node name="SessionTitleLineEdit" type="LineEdit" parent="CanvasLayer/Control/VBoxContainer" index="3"]
+margin_top = 204.0
+margin_right = 944.0
+margin_bottom = 238.0
+align = 1
+placeholder_text = "Title"
+
+[node name="Spacer2" type="Control" parent="CanvasLayer/Control/VBoxContainer" index="4"]
+margin_top = 258.0
+margin_right = 944.0
+margin_bottom = 537.0
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer" index="5"]
+margin_top = 557.0
+margin_right = 944.0
+margin_bottom = 580.0
+custom_constants/separation = 15
+alignment = 1
+
+[node name="StartButton" type="Button" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer" index="0"]
+margin_left = 400.0
+margin_right = 456.0
+margin_bottom = 23.0
+text = "Start"
+icon = ExtResource( 5 )
+
+[node name="CancelButton" type="Button" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 471.0
+margin_right = 543.0
+margin_bottom = 23.0
+text = "Cancel"
+icon = ExtResource( 4 )
+
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/HBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/HBoxContainer/CancelButton" to="." method="_on_CancelButton_pressed"]

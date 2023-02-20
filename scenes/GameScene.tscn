@@ -1,0 +1,143 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scenes/SceneBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/GameScene.gd" type="Script" id=2]
+[ext_resource path="res://components/Scoreboard.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/img/btn-close-pressed.png" type="Texture" id=4]
+[ext_resource path="res://assets/img/btn-close.png" type="Texture" id=5]
+[ext_resource path="res://themes/large_font.tres" type="DynamicFont" id=6]
+[ext_resource path="res://assets/img/btn-help-pressed.png" type="Texture" id=7]
+[ext_resource path="res://assets/img/btn-help.png" type="Texture" id=8]
+[ext_resource path="res://assets/img/btn-minus.png" type="Texture" id=9]
+[ext_resource path="res://assets/img/btn-minus-hover.png" type="Texture" id=10]
+[ext_resource path="res://assets/img/btn-plus.png" type="Texture" id=11]
+[ext_resource path="res://assets/img/btn-plus-hover.png" type="Texture" id=12]
+
+[node name="GameScene" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 40.0
+margin_top = 10.0
+margin_right = -40.0
+margin_bottom = -10.0
+custom_constants/separation = 20
+
+[node name="TitleLabel" type="Label" parent="CanvasLayer/Control/VBoxContainer" index="0"]
+margin_right = 944.0
+margin_bottom = 50.0
+custom_fonts/font = ExtResource( 6 )
+text = "Classroom Tasking"
+align = 1
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer" index="1"]
+margin_top = 70.0
+margin_right = 944.0
+margin_bottom = 530.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 30
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer" index="0"]
+margin_right = 685.0
+margin_bottom = 460.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer" index="0"]
+margin_right = 685.0
+margin_bottom = 460.0
+size_flags_horizontal = 3
+size_flags_vertical = 11
+scroll_horizontal_enabled = false
+
+[node name="TaskButtonGrid" type="GridContainer" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer" index="0"]
+unique_name_in_owner = true
+margin_right = 685.0
+margin_bottom = 460.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/vseparation = 20
+custom_constants/hseparation = 20
+columns = 3
+
+[node name="Scoreboard" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer" index="1" instance=ExtResource( 3 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 715.0
+margin_top = 0.0
+margin_right = 944.0
+margin_bottom = 460.0
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer" index="2"]
+margin_top = 550.0
+margin_right = 944.0
+margin_bottom = 580.0
+
+[node name="PlusButton" type="TextureButton" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer2" index="0"]
+margin_right = 20.0
+margin_bottom = 30.0
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 12 )
+texture_hover = ExtResource( 12 )
+
+[node name="MinusButton" type="TextureButton" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer2" index="1"]
+margin_left = 24.0
+margin_right = 44.0
+margin_bottom = 30.0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 10 )
+
+[node name="Spacer" type="Control" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer2" index="2"]
+margin_left = 48.0
+margin_right = 774.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 300, 0 )
+size_flags_horizontal = 3
+
+[node name="ShowHideScoresButton" type="LinkButton" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer2" index="3"]
+margin_left = 778.0
+margin_right = 816.0
+margin_bottom = 30.0
+text = "Hide"
+
+[node name="EditTeamsButton" type="LinkButton" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer2" index="4"]
+margin_left = 820.0
+margin_right = 910.0
+margin_bottom = 30.0
+text = "Edit Teams"
+
+[node name="HelpButton" type="TextureButton" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer2" index="5"]
+margin_left = 914.0
+margin_right = 944.0
+margin_bottom = 30.0
+toggle_mode = true
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 7 )
+
+[node name="ExitButton" type="TextureButton" parent="CanvasLayer/Control" index="1"]
+margin_right = 54.0
+margin_bottom = 53.0
+texture_normal = ExtResource( 5 )
+texture_hover = ExtResource( 4 )
+
+[connection signal="resized" from="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer" to="." method="_on_ScrollContainer_resized"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/HBoxContainer2/PlusButton" to="." method="_on_PlusButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/HBoxContainer2/MinusButton" to="." method="_on_MinusButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/HBoxContainer2/ShowHideScoresButton" to="." method="_on_ShowHideScoresButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/HBoxContainer2/EditTeamsButton" to="." method="_on_EditTeamsButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/HBoxContainer2/HelpButton" to="." method="_on_HelpButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/ExitButton" to="." method="_on_ExitButton_pressed"]

@@ -1,0 +1,380 @@
+[gd_resource type="Resource" load_steps=40 format=2]
+
+[ext_resource path="res://resources/tasks.gd" type="Script" id=1]
+[ext_resource path="res://resources/task.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=26]
+script = ExtResource( 2 )
+id = "1817552"
+title = "Towers"
+description = "Using only your backpacks and whatever is inside them, build a tower. The tower must remain standing after the timer stops. Tallest tower wins. "
+tags = [  ]
+is_selected = true
+is_completed = false
+date_created = 45
+
+[sub_resource type="Resource" id=28]
+script = ExtResource( 2 )
+id = "3158756"
+title = "Age in Minutes"
+description = "Guess my age in minutes. You must write down your answer before the timer stops. Closest wins."
+tags = [  ]
+is_selected = true
+is_completed = false
+date_created = 44
+
+[sub_resource type="Resource" id=31]
+script = ExtResource( 2 )
+id = "5060257"
+title = "Volume"
+description = "Giving your answer in milliliters, guess how much water is in this container. You may not touch or move the container. Most accurate wins."
+tags = [  ]
+is_selected = true
+is_completed = false
+date_created = 43
+
+[sub_resource type="Resource" id=34]
+script = ExtResource( 2 )
+id = "9653878"
+title = "Timing"
+description = "Stop a stopwatch on exactly 10.00 seconds. You may practice but you will only get one chance per team member. Closest to 10.00 seconds wins."
+tags = [  ]
+is_selected = true
+is_completed = false
+date_created = 42
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+id = "9793401"
+title = "Long Sentence, No Commas"
+description = "Write the longest sentence without any commas. Your sentence must be finished when the timer stops. The sentence with the most words wins."
+tags = [  ]
+is_selected = true
+is_completed = false
+date_created = 41
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 2 )
+id = "3692098"
+title = "Storytime"
+description = "Write a story using 25 words or less. My favorite story wins."
+tags = [  ]
+is_selected = true
+is_completed = false
+date_created = 40
+
+[sub_resource type="Resource" id=12]
+script = ExtResource( 2 )
+id = "1916584"
+title = "Items in the Classroom"
+description = "Write the most things in this room that start with the letter 's'.  Most correct words wins."
+tags = [  ]
+is_selected = true
+is_completed = false
+date_created = 39
+
+[sub_resource type="Resource" id=17]
+script = ExtResource( 2 )
+id = "9994516"
+title = "Paper Creature"
+description = "Using only this paper, scissors, and tape, make a paper creature. My favorite creature wins."
+tags = [  ]
+is_selected = true
+is_completed = false
+date_created = 38
+
+[sub_resource type="Resource" id=18]
+script = ExtResource( 2 )
+id = "6315207"
+title = "Paper Box"
+description = "Make a paper box. You may use only paper and scissors. No tape, or glue! Best box wins."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 37
+
+[sub_resource type="Resource" id=19]
+script = ExtResource( 2 )
+id = "7731577"
+title = "Perfect Circle"
+description = "Using only a pencil, paper, and scissors, cut out a perfect circle. Most perfect circle wins."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 36
+
+[sub_resource type="Resource" id=20]
+script = ExtResource( 2 )
+id = "8253742"
+title = "Circumference"
+description = "Cut your strip of paper so that it exactly wraps around this bottle. You may not touch the bottle until you are finished cutting. Most accurate wins."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 35
+
+[sub_resource type="Resource" id=21]
+script = ExtResource( 2 )
+id = "9693725"
+title = "Exact Weight"
+description = "Make your container weigh exactly 234g. You may weigh your container at any time and as many times as you want. But, you may only add or remove items while the container is on your desk. Fastest wins."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 34
+
+[sub_resource type="Resource" id=22]
+script = ExtResource( 2 )
+id = "4268471"
+title = "Noises"
+description = "All the members of your team will stand behind me. One person will make a (specified) noise. I will guess who made the noise. If I guess incorrectly, your team gets a point. If I guess correctly, no point. The first noise is 'kitten'."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 33
+
+[sub_resource type="Resource" id=23]
+script = ExtResource( 2 )
+id = "3691379"
+title = "Number of Letters"
+description = "I will clap slowly. You will take turns to say a word with the specified number of letters. When it is your turn, you must say a word on my clap. If you hesitate, your team is out. If you repeat a word, your team is out. The first round is 3-letter words. The last team left is the winner."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 32
+
+[sub_resource type="Resource" id=24]
+script = ExtResource( 2 )
+id = "6350201"
+title = "Card Flinging"
+description = "Stand behind the starting line. Fling a card. The team whose card lands closest to the 'X' is the winner."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 31
+
+[sub_resource type="Resource" id=25]
+script = ExtResource( 2 )
+id = "1950138"
+title = "Balancing Act"
+description = "Balance the most objects on one hand of one team member. I will judge if an object is balancing as opposed to being held. The objects must remain balancing after the timer stops. Most objects wins."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 30
+
+[sub_resource type="Resource" id=27]
+script = ExtResource( 2 )
+id = "7606468"
+title = "Gift"
+description = "'Buy' a gift for your teacher. You may only spend $10. I will judge if the price(s) given are realistic. Write down what you will buy and how much it will cost. My favorite present wins."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 29
+
+[sub_resource type="Resource" id=29]
+script = ExtResource( 2 )
+id = "9175983"
+title = "Guessing Game"
+description = "How many candies are in this jar. You may not touch the jar. You must write down your answer before the timer stops. Closest wins."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 28
+
+[sub_resource type="Resource" id=30]
+script = ExtResource( 2 )
+id = "2668358"
+title = "Memory"
+description = "I will read a list of words. You must write down as many of the words as you can. You may not start writing until I have finished reading. You may not record my reading of the list. Minor spelling mistakes will be forgiven. Most correct words wins."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 27
+
+[sub_resource type="Resource" id=32]
+script = ExtResource( 2 )
+id = "4916164"
+title = "Descriptions"
+description = "One member of your team will be a describer. The other member(s) will be illustrators. The describer will be shown a picture. They will describe the picture to the illustrator(s). After hearing the description, and without any further communication, the illustrator(s) will try to recreate the picture. Most accurate picture wins."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 26
+
+[sub_resource type="Resource" id=33]
+script = ExtResource( 2 )
+id = "9366076"
+title = "Googley Eyes"
+description = "Make the cutest thing sing these googly eye stickers. Cutest thing (in my opinion) wins."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 25
+
+[sub_resource type="Resource" id=35]
+script = ExtResource( 2 )
+id = "7623810"
+title = "Hand or Mouth"
+description = "I will give you one piece of candy per turn. You must hold the candy either in your hand or in your mouth. DO NOT swallow it yet! You will then answer my question. I will guess if the candy is in your hand or in your mouth. If I guess incorrectly, your team gets one point."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 24
+
+[sub_resource type="Resource" id=36]
+script = ExtResource( 2 )
+id = "1130573"
+title = "Cushion Cover"
+description = "Write down as many of the items in this cushion cover as you can. You may touch the cover. You may not open in. You may not look inside. Most correct items wins."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 23
+
+[sub_resource type="Resource" id=37]
+script = ExtResource( 2 )
+id = "3754193"
+title = "Voting"
+description = "Vote for a team to get 5 points. You may vote for your own team. However, if you vote for yourself and don't win, you LOSE 5 points. The team who receives the most votes wins."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 22
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 2 )
+id = "6651288"
+title = "Most 'P's in a Sentence"
+description = "Write a sentence with as many letter 'p's as you can. There must be no commas in the sentence and it must be a proper sentence. Your sentence must be finished when the time runs out. The sentence with the most 'p's wins. "
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 21
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 2 )
+id = "870343"
+title = "5 Letter Words"
+description = "Write a sentence that contains only 5 letter words and no commas. Your sentence must be finished when the timer stops, and it must be a proper sentence. Longest correct sentence wins."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 20
+
+[sub_resource type="Resource" id=5]
+script = ExtResource( 2 )
+id = "5218974"
+title = "Breakfast Story"
+description = "Write a story about a problem at breakfast time. My favorite story wins."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 19
+
+[sub_resource type="Resource" id=6]
+script = ExtResource( 2 )
+id = "1610853"
+title = "Story Words"
+description = "Write a story that inlcudes all of the following words:
+Penguin, pencil, piano, pineapple.
+My favorite story wins."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 18
+
+[sub_resource type="Resource" id=7]
+script = ExtResource( 2 )
+id = "7484865"
+title = "Animal Character"
+description = "Name, draw and describe a character that is a combination of two animals. Describe the character's personality, appearance and hobbies. My favorite character wins."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 17
+
+[sub_resource type="Resource" id=8]
+script = ExtResource( 2 )
+id = "7683928"
+title = "Supervillain Description"
+description = "Describe a new supervillain. Describe their appearance and power. My favorite supervillain wins."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 16
+
+[sub_resource type="Resource" id=9]
+script = ExtResource( 2 )
+id = "443767"
+title = "Meal Time"
+description = "Draw or describe a meal. The meal may only contain foods/ingredients that begin with the letter 'm'. My favorite meal wins."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 15
+
+[sub_resource type="Resource" id=10]
+script = ExtResource( 2 )
+id = "3841642"
+title = "Spoons"
+description = "Write the most creative use of a spoon. My favorite use of a spoon wins."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 14
+
+[sub_resource type="Resource" id=11]
+script = ExtResource( 2 )
+id = "8315861"
+title = "Double Letters"
+description = "Write the most words that have a double letter. Most correct words wins."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 13
+
+[sub_resource type="Resource" id=13]
+script = ExtResource( 2 )
+id = "7775158"
+title = "Imaginary Creature"
+description = "Draw a picture of a 'Gribblefowl'. My favorite picture wins."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 12
+
+[sub_resource type="Resource" id=14]
+script = ExtResource( 2 )
+id = "9298187"
+title = "Teacher Drawing"
+description = "Draw a picture of your teacher doing something exciting. My favorite picture wins."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 11
+
+[sub_resource type="Resource" id=15]
+script = ExtResource( 2 )
+id = "3127752"
+title = "New Invention"
+description = "Draw a picture of a brand new invention. You can label your picture or write a short description if you want. My favorite invention wins."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 10
+
+[sub_resource type="Resource" id=16]
+script = ExtResource( 2 )
+id = "4634599"
+title = "Medium Snake"
+description = "Draw a snake. I will measure all the snakes. The medium snake wins. There may be bonus points for excellent snakes."
+tags = [  ]
+is_selected = false
+is_completed = false
+date_created = 9
+
+[resource]
+script = ExtResource( 1 )
+list = [ SubResource( 26 ), SubResource( 28 ), SubResource( 31 ), SubResource( 34 ), SubResource( 1 ), SubResource( 4 ), SubResource( 12 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 27 ), SubResource( 29 ), SubResource( 30 ), SubResource( 32 ), SubResource( 33 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 2 ), SubResource( 3 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ]

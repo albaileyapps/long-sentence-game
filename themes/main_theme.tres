@@ -1,0 +1,115 @@
+[gd_resource type="Theme" load_steps=13 format=2]
+
+[ext_resource path="res://themes/medium_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://themes/large_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://themes/stylebox_white.tres" type="StyleBox" id=3]
+[ext_resource path="res://assets/img/panel.png" type="Texture" id=4]
+[ext_resource path="res://themes/x_small_font.tres" type="DynamicFont" id=5]
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.117647, 0.0823529, 0.219608, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+expand_margin_left = 2.0
+expand_margin_right = 6.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.196078, 0.188235, 0.219608, 0.627451 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+expand_margin_left = 2.0
+expand_margin_right = 6.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.117647, 0.0823529, 0.219608, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+expand_margin_left = 2.0
+expand_margin_right = 6.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.341176, 0.32549, 0.380392, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+expand_margin_left = 2.0
+expand_margin_right = 6.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 1920, 1080 )
+margin_right = 605.153
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.611765, 0.407843, 0.639216, 1 )
+border_color = Color( 0.745098, 0, 0.85098, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0, 0, 0, 0.686275 )
+border_width_left = 6
+border_color = Color( 0, 0, 0, 0.705882 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[resource]
+default_font = ExtResource( 1 )
+Button/fonts/font = ExtResource( 5 )
+Button/styles/focus = SubResource( 5 )
+Button/styles/hover = SubResource( 2 )
+Button/styles/normal = SubResource( 3 )
+Button/styles/pressed = SubResource( 4 )
+Fonts/fonts/large = ExtResource( 2 )
+Fonts/fonts/normal = ExtResource( 1 )
+Label/fonts/font = ExtResource( 1 )
+LineEdit/colors/cursor_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/font_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/font_color_selected = Color( 0, 0, 0, 1 )
+LineEdit/colors/selection_color = Color( 0.721569, 0.854902, 0.937255, 1 )
+LineEdit/fonts/font = ExtResource( 1 )
+LineEdit/styles/focus = ExtResource( 3 )
+LineEdit/styles/normal = ExtResource( 3 )
+LineEdit/styles/read_only = ExtResource( 3 )
+LinkButton/colors/font_color = Color( 1, 1, 1, 1 )
+LinkButton/colors/font_color_hover = Color( 1, 0.486275, 0.905882, 1 )
+LinkButton/fonts/font = ExtResource( 5 )
+Panel/styles/panel = SubResource( 1 )
+TextEdit/styles/completion = ExtResource( 3 )
+TextEdit/styles/focus = ExtResource( 3 )
+TextEdit/styles/normal = ExtResource( 3 )
+TextEdit/styles/read_only = ExtResource( 3 )
+VScrollBar/icons/decrement = null
+VScrollBar/icons/decrement_highlight = null
+VScrollBar/icons/decrement_pressed = null
+VScrollBar/icons/increment = null
+VScrollBar/icons/increment_highlight = null
+VScrollBar/icons/increment_pressed = null
+VScrollBar/styles/grabber = SubResource( 7 )
+VScrollBar/styles/grabber_highlight = null
+VScrollBar/styles/grabber_pressed = null
+VScrollBar/styles/scroll = SubResource( 6 )
+VScrollBar/styles/scroll_focus = null

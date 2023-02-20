@@ -1,0 +1,21 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[sub_resource type="Shader" id=1]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec4 panel_color : hint_color;
+uniform float alpha : hint_range(0.0, 1.0);
+uniform float lod : hint_range(0.0, 100.0);
+
+void fragment() {
+	vec4 tex = textureLod(SCREEN_TEXTURE, SCREEN_UV, lod);
+	COLOR = mix(panel_color, tex, alpha);
+}"
+
+[resource]
+resource_local_to_scene = true
+shader = SubResource( 1 )
+shader_param/panel_color = Color( 0.913725, 0.913725, 0.913725, 1 )
+shader_param/alpha = 0.0
+shader_param/lod = 4.5

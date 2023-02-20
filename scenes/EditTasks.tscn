@@ -1,0 +1,104 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scenes/SceneBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/EditTasks.gd" type="Script" id=2]
+[ext_resource path="res://assets/img/icon-done.png" type="Texture" id=3]
+[ext_resource path="res://themes/large_font.tres" type="DynamicFont" id=4]
+[ext_resource path="res://themes/x_small_font.tres" type="DynamicFont" id=5]
+[ext_resource path="res://assets/img/icon-reset.png" type="Texture" id=7]
+[ext_resource path="res://assets/img/icon-add.png" type="Texture" id=8]
+
+[node name="EditTasks" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 40.0
+margin_top = 10.0
+margin_right = -40.0
+margin_bottom = -10.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 20
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="CanvasLayer/Control/VBoxContainer" index="0"]
+margin_right = 944.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 4 )
+text = "Tasks"
+align = 1
+valign = 1
+
+[node name="ExplanationLabel" type="Label" parent="CanvasLayer/Control/VBoxContainer" index="1"]
+margin_top = 70.0
+margin_right = 944.0
+margin_bottom = 125.0
+size_flags_horizontal = 15
+custom_fonts/font = ExtResource( 5 )
+text = "Tasks that you select here will be included when you start a new session. Select a few tasks that are suitable for your students and your classroom. Some of the tasks do require some prep and/or equipment."
+align = 1
+autowrap = true
+max_lines_visible = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Control/VBoxContainer" index="2"]
+unique_name_in_owner = true
+margin_top = 145.0
+margin_right = 944.0
+margin_bottom = 534.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+scroll_deadzone = 12
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/VBoxContainer/ScrollContainer" index="0"]
+margin_right = 40.0
+margin_bottom = 10.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 10
+custom_constants/margin_left = 30
+custom_constants/margin_bottom = 10
+
+[node name="TasksList" type="VBoxContainer" parent="CanvasLayer/Control/VBoxContainer/ScrollContainer/MarginContainer" index="0"]
+unique_name_in_owner = true
+margin_left = 30.0
+margin_right = 934.0
+margin_bottom = 379.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 10
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer" index="3"]
+margin_top = 554.0
+margin_right = 944.0
+margin_bottom = 580.0
+custom_constants/separation = 15
+alignment = 1
+
+[node name="ExitButton" type="Button" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer" index="0"]
+margin_left = 314.0
+margin_right = 381.0
+margin_bottom = 26.0
+text = "Done"
+icon = ExtResource( 3 )
+
+[node name="AddTaskButton" type="Button" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 396.0
+margin_right = 493.0
+margin_bottom = 26.0
+text = "Add Task"
+icon = ExtResource( 8 )
+
+[node name="SelectNoneButton" type="Button" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer" index="2"]
+margin_left = 508.0
+margin_right = 629.0
+margin_bottom = 26.0
+text = "Select None"
+icon = ExtResource( 7 )
+
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/HBoxContainer/ExitButton" to="." method="_on_ExitButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/HBoxContainer/AddTaskButton" to="." method="_on_AddTaskButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/HBoxContainer/SelectNoneButton" to="." method="_on_SelectNoneButton_pressed"]

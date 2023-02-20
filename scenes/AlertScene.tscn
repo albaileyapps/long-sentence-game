@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/SceneBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/img/btn-close.png" type="Texture" id=2]
+[ext_resource path="res://assets/img/btn-close-pressed.png" type="Texture" id=3]
+[ext_resource path="res://scenes/AlertScene.gd" type="Script" id=4]
+[ext_resource path="res://themes/medium_font.tres" type="DynamicFont" id=5]
+[ext_resource path="res://themes/large_font.tres" type="DynamicFont" id=6]
+
+[node name="AlertScene" instance=ExtResource( 1 )]
+script = ExtResource( 4 )
+
+[node name="ExitButton" type="TextureButton" parent="CanvasLayer/Control" index="0"]
+margin_right = 50.0
+margin_bottom = 50.0
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control" index="1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 40.0
+margin_top = 40.0
+margin_right = -40.0
+margin_bottom = -40.0
+mouse_filter = 2
+
+[node name="TitleLabel" type="Label" parent="CanvasLayer/Control/VBoxContainer" index="0"]
+margin_right = 944.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 6 )
+align = 1
+valign = 1
+clip_text = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Control/VBoxContainer" index="1"]
+margin_top = 54.0
+margin_right = 944.0
+margin_bottom = 520.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MessageLabel" type="Label" parent="CanvasLayer/Control/VBoxContainer/ScrollContainer" index="0"]
+margin_right = 944.0
+margin_bottom = 466.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 5 )
+align = 1
+valign = 1
+autowrap = true
+
+[connection signal="gui_input" from="CanvasLayer/Control" to="." method="_on_Control_gui_input"]
+[connection signal="pressed" from="CanvasLayer/Control/ExitButton" to="." method="_on_ExitButton_pressed"]
